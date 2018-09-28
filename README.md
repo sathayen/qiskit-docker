@@ -4,7 +4,7 @@
 
 ## Pre-requisites
 * docker: To build a docker image, you need to have docker installed and start the docker service. Also make sure to set appropriate user permission to run docker. Visit the [docker website](https://www.docker.com/) for OS specific instructions. If you are running Windows 7, you will need to install [docker toolbox](https://docs.docker.com/toolbox/toolbox_install_windows/)
-- OS: Linux or Mac (tested only on Linux). 
+- This has been tested on Linux.
 
 ## Docker image
 * The docker image can be pulled directly from dockerhub: `docker pull nsathaye/qiskit-dev`. See https://hub.docker.com/r/nsathaye/qiskit-dev/ for more information. 
