@@ -1,0 +1,15 @@
+
+1. Create an entanglement between two qubits such that the results of both entangled qubits are different. 
+
+--> 01  and 10
+
+2. Using X gates and appropriate CNOTs generate the result:
+
+--> 11000
+
+Start with all 5 qubits as 11111
+
+
+3. Using X, H, and CNOTs arrive at the ~50/50  results of"
+--> 11000 and 10100  
+
