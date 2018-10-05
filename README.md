@@ -1,3 +1,5 @@
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/sathayen/qiskit-docker/master)
+
 # qiskit-docker
 * This repo 'dockerizes'  the development version of [qiskit-terra](https://github.com/Qiskit/qiskit-terra), [aqua](https://github.com/Qiskit/aqua) and [aqua-chemistry](https://github.com/Qiskit/aqua-chemistry)
 
