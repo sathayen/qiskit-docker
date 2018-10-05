@@ -13,6 +13,8 @@ WORKDIR $QISKIT_DIR
 
 COPY requirements.txt $QISKIT_DIR
 COPY setup_qiskit_dev.sh $QISKIT_DIR
+COPY examples $QISKIT_DIR
+COPY quiz $QISKIT_DIR
 
 RUN apt-get update && apt-get install -q -y sudo wget bzip2 git build-essential libssl-dev libffi-dev python3-dev python3-pip 
 
