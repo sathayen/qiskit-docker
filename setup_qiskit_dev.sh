@@ -1,21 +1,42 @@
 #!/bin/bash
 
+# install terra
 git clone https://github.com/Qiskit/qiskit-terra.git
 cd qiskit-terra
-sed 's/${QISKIT_VERSION}/0.6.1/g' setup.py.in > setup.py 
+pip3 install cython
+pip3 install -r requirements-dev.txt
 pip3 install -e .
-#commit_id_terra=`git rev-parse --short HEAD`
-cd ..
-git clone https://github.com/Qiskit/aqua.git    
-git clone https://github.com/Qiskit/aqua-chemistry.git
-git clone https://github.com/Qiskit/qiskit-tutorial.git
-git clone https://github.com/Qiskit/aqua-tutorials.git
 
-for d in "aqua" "aqua-chemistry"
-do
-cd $d
+cd ..
+
+# install aer
+git clone https://github.com/Qiskit/qiskit-aer
+pip3 install cmake scikit-build cython
+cd qiskit-aer
+python ./setup.py bdist_wheel
+cd dist
+pip3 install qiskit_aer-*.whl
+
+cd ..
+
+# install ignis
+git clone https://github.com/Qiskit/qiskit-ignis.git
+cd qiskit-ignis
+pip3 install -r requirements-dev.txt
 pip3 install -e .
-#commit_id_$d=`git rev-parse --short HEAD`
-cd ..
-done
 
+cd ..
+
+# install aqua
+git clone https://github.com/Qiskit/qiskit-aqua.git
+cd qiskit-aqua
+pip3 install -r requirements-dev.txt
+pip3 install -e .
+
+cd ..
+
+# install ibm q provider
+git clone https://github.com/Qiskit/qiskit-ibmq-provider.git
+cd qiskit-ibmq-provider
+pip3 install -r requirements-dev.txt
+pip3 install -e .
